@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Welcome to your program</h1>
+    <p>report your data in this page.</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            {{ date }}<br />
+            {{ toothbrush }}<br />
+            {{ sport }}<br />
+            <p>Saved</p>
+            <button type="button" class="btn btn-primary" onclick="window.location='{% url 'index' %}';">Back</button>
+        </div>
+        <div class="col-sm-8">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>Date</td>
+                        <td>Toothbrush</td>
+                        <td>Sport</td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                {% for x in all_data %}
+                    <tr>
+                        <td>{{ x.date }}</td>
+                        <td>{{ x.toothbrush }}</td>
+                        <td>{{ x.sport }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

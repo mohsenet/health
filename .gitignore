@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+
+# C extensions
+*.so
+
+/venv
+/.idea
+
+fraud.log
+static/img/captcha.png
+app_froud/fraud/__pycache__
+app_froud/migrations/__pycache__
+app_froud/models/__pycache__
+app_froud/views/__pycache__
+app_froud/fraud/learn_info/__pycache__
+app_froud/models/__pycache__
+app_froud/utils/__pycache__
+froudPanel/__pycache__
+
